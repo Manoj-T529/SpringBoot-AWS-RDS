@@ -1,0 +1,41 @@
+#DataSource Configuration
+
+spring:
+  #datasource:
+    
+    #url: jdbc:mysql://simpledemo.cdtyc8soymes.us-east-1.rds.amazonaws.com:3306/simpleDemoDB
+    #username: root
+    #password: Password123
+    
+    
+#JPA Configuration
+
+  jpa:
+    database: MYSQL
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    defer-datasource-initialization: true
+  
+  
+  
+    properties:
+     hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      format_sql: true
+            
+server:
+    port: 9000
+
+#cloud:
+#  aws:
+#    region:
+#      static: us-east-1
+#        auto: false
+#          credentials:
+#            access-key: AKIAXUDM3OXZH6O4YGNC
+#            secret-key: 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   
